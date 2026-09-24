@@ -1,6 +1,6 @@
 # Adaptive Multi-Agent System for Scientific Claim Verification
 
-Team: Akshayaa Mahesh, Dhruthi Rajesh, Meghana Raghavendra
+Team: Akshayaa Mahesh, Meghana Raghavendra, Dhruthi Rajesh
 
 ## Setup
 ```bash
