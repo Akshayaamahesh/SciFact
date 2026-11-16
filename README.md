@@ -6,7 +6,7 @@
 ![Dataset](https://img.shields.io/badge/Dataset-SciFact-6E40C9?style=flat-square)
 
 Given a scientific claim, this system retrieves evidence from a corpus of biomedical abstracts and decides whether
-the evidence **SUPPORTS** the claim, **CONTRADICTS** it, or provides **Not Enough Information (NEI)** — together with
+the evidence **SUPPORTS** the claim, **CONTRADICTS** it, or provides **Not Enough Information (NEI)** - together with
 a calibrated confidence score.
 
 Instead of a single end-to-end model, the task is decomposed across specialized agents (retrieval, evidence
@@ -37,11 +37,11 @@ flowchart LR
     J --> L[SUPPORT / CONTRADICT / NEI<br/>+ confidence]
 ```
 
-- **Claim Analyzer** — categorizes the claim type, which informs how the Judge scores confidence.
-- **Retrieval Agent** — five interchangeable retrievers, from sparse keyword matching to dense semantic search.
-- **Evidence Selector** — ranks sentences across the top-3 retrieved abstracts rather than only the first.
-- **NLI Verifier** — single DeBERTa (zero-shot or fine-tuned), or a multi-agent ensemble of DeBERTa, BART-MNLI, and MiniLM with majority / confidence-weighted voting.
-- **Judge Agent** — penalizes disagreement between sentence- or model-level predictions; anything below 0.40 confidence is downgraded to NEI.
+- **Claim Analyzer** - categorizes the claim type, which informs how the Judge scores confidence.
+- **Retrieval Agent** - five interchangeable retrievers, from sparse keyword matching to dense semantic search.
+- **Evidence Selector** - ranks sentences across the top-3 retrieved abstracts rather than only the first.
+- **NLI Verifier** - single DeBERTa (zero-shot or fine-tuned), or a multi-agent ensemble of DeBERTa, BART-MNLI, and MiniLM with majority / confidence-weighted voting.
+- **Judge Agent** - penalizes disagreement between sentence- or model-level predictions; anything below 0.40 confidence is downgraded to NEI.
 
 ## Retrieval Benchmark
 
@@ -111,13 +111,13 @@ gold evidence; the zero-shot model (default) is more robust inside the full retr
 
 ## Future Work
 
-- **Pipeline-aware training** — fine-tune the verifier on *retrieved* rather than gold evidence to close the distribution gap.
-- **Cross-encoder re-ranking** — second-stage re-ranker targeting Recall@1 > 0.80.
-- **Disagreement-triggered re-retrieval** — fetch more evidence when agents disagree instead of defaulting to NEI.
+- **Pipeline-aware training** - fine-tune the verifier on *retrieved* rather than gold evidence to close the distribution gap.
+- **Cross-encoder re-ranking** - second-stage re-ranker targeting Recall@1 > 0.80.
+- **Disagreement-triggered re-retrieval** - fetch more evidence when agents disagree instead of defaulting to NEI.
 
 ## Team
 
-Akshayaa Mahesh · Meghana Raghavendra · Dhruthi Rajesh — *Foundations of AI, Northeastern University*
+Akshayaa Mahesh · Meghana Raghavendra · Dhruthi Rajesh - *Foundations of AI, Northeastern University*
 
 ## References
 
