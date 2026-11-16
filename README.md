@@ -58,8 +58,8 @@ flowchart LR
 ## Quick Start
 
 ```bash
-git clone https://github.com/Akshayaamahesh/scientific_claim_verification.git
-cd scientific_claim_verification
+git clone https://github.com/Akshayaamahesh/SciFact.git
+cd SciFact
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 
